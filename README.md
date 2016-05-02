@@ -1,5 +1,4 @@
-# uShare
-
+#WS.py
 # coding: utf-8
 # Author: Mirela Hilmkvist
 
@@ -38,9 +37,9 @@ def mat():
     sid = request.get_cookie("account", secret='some-secret-key')
     email = get_email(str(sid))
     if email:
-        return template("materiale.tpl", email = email)
+        return template("tip_us.tpl", email = email)
     else:
-        return template("materiale.tpl", email='')
+        return template("tip_us.tpl", email='')
 
 
 @route('/program')
@@ -58,9 +57,9 @@ def arhitect():
     sid = request.get_cookie("account", secret='some-secret-key')
     email = get_email(str(sid))
     if email:
-        return template('arhitect.tpl', email=email)
+        return template('architect.tpl', email=email)
     else:
-        return template('arhitect.tpl', email='')
+        return template('architect.tpl', email='')
 
 
 
